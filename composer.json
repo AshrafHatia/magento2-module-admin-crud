@@ -1,0 +1,32 @@
+{
+    "name": "ashrafhatia/magento-module-admin-crud",
+    "description": "Magento 2 Crud opration on backend/admin side",
+    "type": "magento2-module",
+    "version": "0.1.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Ashraf Hatia",
+            "email": "ashraf.magento@gmail.com "
+        }
+    ],
+    "keywords": [
+        "magento 2",
+        "magento 2 crud",
+        "magento 2 admin crud",
+        "magento 2 backendcrud",
+        "magento 2 image upload from admin",
+        "magento 2 custom url key"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Ashraf\\Crud\\": ""
+        }
+    }
+}

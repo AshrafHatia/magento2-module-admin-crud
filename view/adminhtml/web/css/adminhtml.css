@@ -1,0 +1,75 @@
+.config-nav .ashraf-tab .admin__page-nav-title::before {
+    content: "";
+    background-image: url("../images/ashraflogo.png");
+    background-repeat: no-repeat;
+    background-size: 110px;
+    background-position: 0 0;
+    height: 35px;
+    position: absolute;
+    width: 110px;
+    top: 7px;
+}
+.config-nav .ashraf-tab .admin__page-nav-title strong {
+    margin-left: 40px;
+}
+
+#ai-info .ai-logo {
+    content: "";
+    background-image: url("../images/ashraflogo.png");
+    background-repeat: no-repeat;
+    background-size: 110px;
+    background-position: 0 0;
+    height: 30px;
+    position: absolute;
+    width: 110px;
+    top: 7px;
+}
+#ai-info .ai-logo {
+    position: relative;
+    bottom: -9px;
+    display: inline-block;
+    max-height: 41px;
+    margin-left: 4px;
+    margin-right: 5px;
+}
+#ai-info a {
+    font-weight: bold;
+    border-left: 2px solid #918c8c;
+    padding-left: 5px;
+    padding-right: 10px;
+    color: #1e90ff;
+}
+#ai-info a:first-child {
+    padding-left: 5px;
+    border-left: none;
+}
+#ai-info {
+    font-weight: 600;
+    padding-bottom: 10px;
+    background-color: #eaf5e1;
+}
+#ai-module {
+    font-size: 20px;
+    font-weight: 800;
+    color: #40748e;
+    margin-left: 10px;
+}
+#ai-module span {
+    color: #0000ff;
+}
+.ai-logo-footer {
+    position: relative;
+    bottom: -9px;
+    display: initial;
+    max-height: 25px;
+    margin-left: 4px;
+    margin-right: 5px;
+}
+/* .admin__menu .level-0.item-ai > a:before {
+    content: '';
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 42px;
+    background-position: center;
+    height: 50px;
+  } */

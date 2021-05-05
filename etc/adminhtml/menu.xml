@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ashraf_Crud::title" title="Ashraf" parent="Magento_Backend::marketing" module="Ashraf_Crud" sortOrder="10" resource="Ashraf_Crud::title"/>
+        <add id="Ashraf_Crud::items" title="Crud Data" translate="title" module="Ashraf_Crud" sortOrder="20" parent="Ashraf_Crud::title" action="magecrud/item" resource="Ashraf_Crud::items"/>
+        <add id="Ashraf_Crud::config" title="Configuration" module="Ashraf_Crud" sortOrder="40" parent="Ashraf_Crud::items" action="adminhtml/system_config/edit/section/crud_config" resource="Ashraf_Crud::config"/>
+    </menu>
+</config>

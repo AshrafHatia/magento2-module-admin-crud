@@ -1,0 +1,50 @@
+<?php
+
+/**
+ *
+ * @var $block \Ashraf\Crud\Block\ListItem
+ *
+ */
+?>
+<?php
+$helper = $this->_helper;
+$width = $helper->liwth();
+$height = $helper->lihgt();
+$items = $block->getItems();
+?>
+<?php if (!$items->count()) : ?>
+    <div class="message info empty">
+        <div><?= $block->escapeHtml(__('We can\'t find items matching the selection')) ?></div>
+    </div>
+    <?php return; ?>
+<?php endif; ?>
+<div class="products wrapper grid products-grid">
+    <ol class="products list items product-items">
+        <?php foreach ($items as $item) :
+            $href = $helper->getLinkItem($item); ?>
+            <li class="item product product-item">
+                <figure>
+                    <figcaption>
+                        <tr>
+                            <div class="image-block">
+                                <a href="<?= /* @escapeNotVerified */ $href ?>">
+                                    <img src="<?= /* @escapeNotVerified */ $helper->getMediaUrl($item->getImage()); ?>" width="<?= $width . 'px'; ?>" height="<?= $height . 'px'; ?>" alt="<?= /* @escapeNotVerified */ $item->getTitle(); ?>" />
+                                </a>
+                            </div>
+                            <div class="name">
+                                <h3><?= $item->getTitle(); ?></h3>
+                            </div>
+                            <div class="srtdesc"><span> <?= $item->getSrtdesc(); ?></span></div>
+                            <div class="content show-read-more"> <a class="link-item" href="<?= /* @escapeNotVerified */ $href ?>">
+                                    read more...
+                                </a>
+                            </div>
+                        </tr>
+                    </figcaption>
+                </figure>
+            </li>
+        <?php endforeach; ?>
+</div>
+<?php if ($block->getPagerHtml()) : ?>
+    <div class="order-products-toolbar toolbar bottom"><?= $block->getPagerHtml() ?></div>
+<?php endif ?>

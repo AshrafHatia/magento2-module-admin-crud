@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="ashraf" translate="label" sortOrder="350" class="ashraf-tab">
+            <label></label>
+        </tab>
+        <section id="crud_config" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Crud</label>
+            <tab>ashraf</tab>
+            <resource>Ashraf_Crud::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <attribute type="expanded">1</attribute>
+                <comment>
+                    <![CDATA[
+                    <div id="ai-info">
+                        <a href="https://ashrafhatia.github.io/" target="_blank">
+                        <div class="ai-logo"></div>© 2021
+                        <a href="mailto:ashraf.magento@gmail.com">Mail for Support</a>
+                    </div>
+                    <div id="ai-module">
+                        Ashraf Crud Module -
+                        <span> Version 0.1.0 </span>
+                    </div>
+                    <hr style="border-top: 2px solid #e3e3e3" />
+                ]]>
+                </comment>
+                <field id="status" translate="label comment" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Status</label>
+                    <comment>Enabled / Disable Module frontend</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="mail" translate="label" type="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Contact</label>
+                </field>
+            </group>
+            <group id="list" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Item List Page</label>
+                <field id="width" translate="label comment" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Image width</label>
+                </field>
+                <field id="height" translate="label comment" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Image height</label>
+                </field>
+            </group>
+            <group id="detail" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Item Detail Page</label>
+                <field id="width" translate="label comment" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Image width</label>
+                </field>
+                <field id="height" translate="label comment" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Image height</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

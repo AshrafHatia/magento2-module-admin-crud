@@ -1,0 +1,25 @@
+<?php
+$item = $block->getItem();
+if (!$item || $item->getStatus() == 0) : ?>
+    <div class="message info empty">
+        <div><?= $block->escapeHtml(__('We can\'t find item matching in this selection')) ?></div>
+    </div>
+<?php return;
+endif;
+$helper =  $this->_helper;
+$image = $item->getImage();
+$shortdescription = $this->getShortDescription();
+$description = $this->getDescription();
+$width = $helper->diwth();
+$height = $helper->dihgt();
+?>
+<h1 class="title"><?= $item->getTitle(); ?></h1>
+<?php if ($image) : ?>
+    <div class="item-view">
+        <div class="image">
+            <img class="img-responsive" src="<?= $helper->getMediaUrl($image) ?>" width="<?= $width; ?>" height="<?= $height; ?>" alt="<?= $item->getTitle(); ?>" />
+        </div>
+    <?php endif; ?>
+    <?php echo $shortdescription ? '<div class="item-shotdescription">' . $shortdescription . '</div>' : ''; ?>
+    <?php echo $description ? '<div class="item-description">' . $description . '</div>' : ''; ?>
+    </div>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <crud_config>
+            <general>
+                <status>1</status>
+                <mail>ashraf.magento@gmail.com </mail>
+            </general>
+            <list>
+                <width>150</width>
+                <height>100</height>
+            </list>
+            <detail>
+                <width>1240</width>
+                <height>300</height>
+            </detail>
+        </crud_config>
+    </default>
+</config>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Items</title>
+    </head>
+    <body>
+        <referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="store_switcher">
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Ashraf\Crud\Block\Adminhtml\Item\Edit" name="item_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Ashraf\Crud\Block\Adminhtml\Item\Edit\Tabs" name="item_edit_tabs">
+                <block class="Ashraf\Crud\Block\Adminhtml\Item\Edit\Tab\Form" name="item_edit_tab_form"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">item_edit_tab_form</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="legal.system">
+            <referenceBlock name="report" remove="true"/>
+            <referenceBlock name="version" remove="true"/>
+            <block class="Magento\Framework\View\Element\Template" name="megamenu-version" template="Ashraf_Crud::footer/version.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

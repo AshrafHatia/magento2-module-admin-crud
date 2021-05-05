@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="formkey"/>
+    <head>
+    	<title>Items</title>
+    </head>
+    <body>
+    	<referenceBlock name="page.title">
+    	    <action method="setPageTitle">
+    	        <argument name="pageTitle" xsi:type="string">Items</argument>
+    	    </action>
+    	</referenceBlock>
+        <referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="store_switcher">
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Ashraf\Crud\Block\Adminhtml\Item" name="admin.block.item.grid.container"/>
+        </referenceContainer>
+        <referenceContainer name="legal.system">
+            <referenceBlock name="report" remove="true"/>
+            <referenceBlock name="version" remove="true"/>
+            <block class="Magento\Framework\View\Element\Template" name="megamenu-version" template="Ashraf_Crud::footer/version.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
