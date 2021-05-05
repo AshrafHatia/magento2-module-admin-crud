@@ -33,12 +33,19 @@
 ## 🤖 Installation
 
 
+> ***The extension must be installed via composer.*** 
+
+> **To proceed, run these commands in your terminal:**
+
 ```bash
-Download zip from github 
-
-Magento_Root_Directory/app/code/Ashraf/Crud
-
+composer require ashrafhatia/magento-module-admin-crud
 php bin/magento module:enable Ashraf_Crud
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy
+php bin/magento indexer:reindex
+php bin/magento cache:clean
+php bin/magento cache:flush
 ```
 
 ## 📦 Usage
